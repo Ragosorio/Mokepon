@@ -164,7 +164,7 @@ input:checked+label{
 
 @media (max-width: 800px) {
     .title{
-        font-size: 70px;
+        font-size: 65px;
     }
     .grupo-tarjetas{
         flex-direction: column;
@@ -184,6 +184,9 @@ input:checked+label{
 }
 @media (max-width: 510px){
     .title{
-        font-size: 60px;
+        font-size: 50px;
+    }
+    .subtitulo{
+        font-size: 40px;
     }
 }
