@@ -4,46 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Mokepon!</title>
-    <script src="modificada.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modificada.js"></script>
 </head>
 <body>
-    <h1>MOKEPON! 💦🔥☘️</h1>
 
-    <section id="seleccionar-mascota">
-        <h2>Elige tu mascota</h2>
+    <section id="seleccionar-mascota" class="seleccionar-mascota">
 
-        <label for="hipodoge">Hipodoge</label>
-        <input type="radio" name="mascota" id="hipodoge">
+        <h1 class="title">¡MOKEPON!</h1>
 
-        <label for="capipepo">Capipepo</label>
-        <input type="radio" name="mascota" id="capipepo">
+        <h2 class="subtitulo">Elige tu mascota</h2>
 
-        <label for="ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota" id="ratigueya">
+        <div class="grupo-tarjetas">
+            <input type="radio" name="mascota" id="hipodoge">
+            <label for="hipodoge" class="tarjeta-de-mokepon">
+                <p>Hipodoge</p>
+                <img src="png/hipodoge.png" alt="hipodoge">
+            </label>
+        
+            <input type="radio" name="mascota" id="capipepo">
+            <label for="capipepo" class="tarjeta-de-mokepon">
+                <p>Capipepo</p>
+                <img src="png/capipepo.png" alt="capipepo">
+            </label>
+            
+            <input type="radio" name="mascota" id="ratigueya">
+            <label for="ratigueya" class="tarjeta-de-mokepon">
+                <p>Ratigueya</p>
+                <img src="png/ratigueya.png" alt="ratigueya">
+            </label>
+
+        </div>
+
+        <button id="seleccionar" class="btn-seleccionar">Seleccionar</button>
+
+        <!-- Hipodoge -> Agua
+        Capipepo -> Tierra
+        Ratigueya -> Fuego
+        Langostelvis -> Agua y Fuego
+        Tucapalma -> Agua y Tierra
+        Paidos -> Tierra y Fuego -->
         
 
-        <button id="seleccionar">Seleccionar</button>
     </section>
 
 
-    <section id="seleccionar-ataque" >
-        <h2>Elige tu ataque</h2>
+    <section id="seleccionar-ataque" class="seleccionar-ataques">
+        <h1 class="title">¡MOKEPON!</h1>
+        
+        <h2 class="subtitulo">Elige tu ataque</h2>
 
-        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p> 
-        <p>La mascota del enemigo <span id="mascota-enemigo"></span> tiene <span id="vidas-enemigo">3</span> vidas</p>
+        <div class="btns-ataques">
+            <button id="ataque-fuego" class="btn-ataque fuego">Fuego 🔥</button>
+            <button id="ataque-agua" class="btn-ataque agua">Agua 💦</button>
+            <button id="ataque-tierra" class="btn-ataque tierra">Tierra 🌏</button>
+        </div>
 
-        <p>
-            <button id="ataque-fuego">Fuego 🔥</button>
-            <button id="ataque-agua">Agua 💦</button>
-            <button id="ataque-tierra">Tierra ☘️</button>
-        </p>
-    </section>
+        <div id="mensajes" class="mns">
+            <p id="resultado">Suerte Crack 😏</p>
+            <section id="reiniciar">
+                <button id="next" class="btn-reiniciar">Siguiente batalla</button>
+            </section>
+        </div>
 
-    <section id="mensajes">
-    </section>
+        <div class="ataques">
+            <div class="tarjeta-jugador">
+                <p id="vidas-jugador" class="vida-de-usuario">3</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
 
-    <section id="reiniciar">
-        <button id="next">Siguiente batalla</button>
+            <div class="tarjeta-enemigo">
+                <p id="vidas-enemigo" class="vida-de-enemigo">3</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>           
+        </div>
     </section>
 </body>
 </html>
