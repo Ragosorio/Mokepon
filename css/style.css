@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #30f4f4 0%,#b28620 50%,#82f28a 100%) no-repeat fixed center;
+    color: #fff;
+    margin: 0;
+}
+
+.seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 120px;
+    width: 100vw;
+    margin: 10px;
+    color: rgba(245, 245, 245, .8);
+}
+
+.subtitulo{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 40px;
+    color: rgba(245, 245, 245, .8);
+    margin-top: 70px;
+}
+
+.grupo-tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.tarjeta-de-mokepon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 185px;
+    padding: 20px;
+    background: rgba(245, 245, 245, .4);
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    font-size: 30px;
+    border: .5px solid #fff;
+    border-radius: 20px;
+}
+.parrafos-edit{
+    font-size: 26px;
+    margin: 0;
+}
+
+.tarjeta-de-mokepon img{
+    width: 140px;
+    height: 140px;
+}
+
+input{
+    display: none;
+}
+
+label:hover{
+    background: rgba(195, 64, 212, 0.3);
+}
+
+input:checked+label{
+    background: rgba(195, 64, 212, 0.5);
+}
+
+.btn-seleccionar{
+    /* font-family: 'Luckiest Guy', cursive; */
+    font-family: 'Silkscreen', cursive;
+    width: 700px;
+    height: 30px;
+    background: transparent;
+    border: .5px solid #fff;
+    margin: 40px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.btn-seleccionar:hover{
+    background: rgba(195, 64, 212, 0.3);  
+}
+
+/*PANTALLA ATAQUES*/
+
+.seleccionar-ataques{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-ataque{
+    background: rgba(245, 245, 245, .4);
+    border-radius: 20px;
+    padding: 10px;
+    border-color: transparent;
+    width: 100px;
+    color: #fff;
+    font-family: 'Silkscreen', cursive;
+    margin: 0 15px;
+}
+
+.fuego:hover{
+    background: rgba(243, 153, 56, 0.518);
+}
+
+.agua:hover{
+    background: rgba(56, 153, 243, 0.518);
+}
+
+.tierra:hover{
+    background: rgba(103, 54, 1, 0.518);
+}
+
+.mns{
+    width: 300px;
+    background: linear-gradient(135deg, #30f4f4 0%,#35ca37 50%,#82f28a 100%);
+    /* background: #68d570; */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.btn-reiniciar{
+    border: none;
+    background: none;
+    /* background: #68d570; */
+    color: #fff;
+    font-family: 'Silkscreen', cursive;
+}
+
+.btn-reiniciar:hover{
+    cursor: pointer;
+}
+
+.ataques{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 200px 200px;
+}
+
+.vida-de-enemigo , .vida-de-usuario{
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.tarjeta-jugador , .tarjeta-enemigo{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Luckiest Guy', cursive;
+    align-items: center;
+}
+/* -----EMPIEZA LA SECCION DEL RECORRIDO EN EL MAPA----- */
+.title-pequeño{
+    font-size: 70px;
+}
+
+.ver-mapa{
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-btns-mapas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns-mapa{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background: rgba(245, 245, 245, .4);
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    font-size: 50px;
+    border: .5px solid #fff;
+    border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+    .title{
+        font-size: 65px;
+    }
+    .grupo-tarjetas{
+        flex-direction: column;
+    }
+    .btn-seleccionar{
+        width: 300px;
+    }
+    .btns-ataques{
+        flex-direction: column;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .btn-ataque{
+        width: 100px;
+    }
+}
+@media (max-width: 510px){
+    .title{
+        font-size: 50px;
+    }
+    .subtitulo{
+        font-size: 40px;
+    }
+}
+@media (max-width: 510px){
+    .div-btns-mapas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
