@@ -33,6 +33,8 @@ body{
 .grupo-tarjetas{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
 }
 
@@ -42,7 +44,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 320px;
-    height: 170px;
+    height: 185px;
     padding: 20px;
     background: rgba(245, 245, 245, .4);
     box-sizing: border-box;
@@ -51,6 +53,10 @@ body{
     font-size: 30px;
     border: .5px solid #fff;
     border-radius: 20px;
+}
+.parrafos-edit{
+    font-size: 26px;
+    margin: 0;
 }
 
 .tarjeta-de-mokepon img{
@@ -99,7 +105,7 @@ input:checked+label{
     border-radius: 20px;
     padding: 10px;
     border-color: transparent;
-    width: 200px;
+    width: 100px;
     color: #fff;
     font-family: 'Silkscreen', cursive;
     margin: 0 15px;
@@ -161,6 +167,34 @@ input:checked+label{
     font-family: 'Luckiest Guy', cursive;
     align-items: center;
 }
+/* -----EMPIEZA LA SECCION DEL RECORRIDO EN EL MAPA----- */
+.title-pequeño{
+    font-size: 70px;
+}
+
+.ver-mapa{
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-btns-mapas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns-mapa{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background: rgba(245, 245, 245, .4);
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    font-size: 50px;
+    border: .5px solid #fff;
+    border-radius: 100%;
+}
 
 @media (max-width: 800px) {
     .title{
@@ -179,7 +213,7 @@ input:checked+label{
         align-items: center;
     }
     .btn-ataque{
-        width: 260px;
+        width: 100px;
     }
 }
 @media (max-width: 510px){
@@ -188,5 +222,12 @@ input:checked+label{
     }
     .subtitulo{
         font-size: 40px;
+    }
+}
+@media (max-width: 510px){
+    .div-btns-mapas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
