@@ -7,34 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="modificada.js"></script>
 </head>
 <body>
 
     <section id="seleccionar-mascota" class="seleccionar-mascota">
-
         <h1 class="title">¡MOKEPON!</h1>
 
         <h2 class="subtitulo">Elige tu mascota</h2>
 
-        <div class="grupo-tarjetas">
-            <input type="radio" name="mascota" id="hipodoge">
-            <label for="hipodoge" class="tarjeta-de-mokepon">
-                <p>Hipodoge</p>
-                <img src="png/hipodoge.png" alt="hipodoge">
-            </label>
-        
-            <input type="radio" name="mascota" id="capipepo">
-            <label for="capipepo" class="tarjeta-de-mokepon">
-                <p>Capipepo</p>
-                <img src="png/capipepo.png" alt="capipepo">
-            </label>
-            
-            <input type="radio" name="mascota" id="ratigueya">
-            <label for="ratigueya" class="tarjeta-de-mokepon">
-                <p>Ratigueya</p>
-                <img src="png/ratigueya.png" alt="ratigueya">
-            </label>
+        <div id="contenedorTarjetas" class="grupo-tarjetas">
 
         </div>
 
@@ -46,8 +27,37 @@
         Langostelvis -> Agua y Fuego
         Tucapalma -> Agua y Tierra
         Paidos -> Tierra y Fuego -->
-        
+        </section>
 
+    <section id="verMapa" class="ver-mapa">
+        <h1 class="title title-pequeño">Recorre el mapa</h1>
+        <canvas id="mapa" class="mape"></canvas>
+        <button class="btns-mapa" 
+            onmouseup="detenerMovimiento()" 
+            ontouchend="detenerMovimiento()" 
+            onmousedown="moverArriba()" 
+            ontouchstart="moverArriba()"
+            >⬆</button>
+        <div class="div-btns-mapas">
+            <button class="btns-mapa"
+            onmouseup="detenerMovimiento()"
+            ontouchend="detenerMovimiento()" 
+            onmousedown="moverIzquierda()"
+            ontouchstart="moverIzquierda()"
+            >⬅</button>
+            <button class="btns-mapa"
+            onmouseup="detenerMovimiento()"
+            ontouchend="detenerMovimiento()" 
+            onmousedown="moverAbajo()"
+            ontouchstart="moverAbajo()"
+            >⬇</button>
+            <button class="btns-mapa"
+            onmouseup="detenerMovimiento()"
+            ontouchend="detenerMovimiento()" 
+            onmousedown="moverDerecha()"
+            ontouchstart="moverDerecha()"
+            >👉</button>
+        </div>
     </section>
 
 
@@ -56,10 +66,7 @@
         
         <h2 class="subtitulo">Elige tu ataque</h2>
 
-        <div class="btns-ataques">
-            <button id="ataque-fuego" class="btn-ataque fuego">Fuego 🔥</button>
-            <button id="ataque-agua" class="btn-ataque agua">Agua 💦</button>
-            <button id="ataque-tierra" class="btn-ataque tierra">Tierra 🌏</button>
+        <div id="botonesDeAtaque" class="btns-ataques">
         </div>
 
         <div id="mensajes" class="mns">
@@ -71,17 +78,18 @@
 
         <div class="ataques">
             <div class="tarjeta-jugador">
-                <p id="vidas-jugador" class="vida-de-usuario">3</p>
+                <p id="vidas-jugador" class="vida-de-usuario">0</p>
                 <p id="mascota-jugador"></p>
                 <div id="ataques-del-jugador"></div>
             </div>
 
             <div class="tarjeta-enemigo">
-                <p id="vidas-enemigo" class="vida-de-enemigo">3</p>
+                <p id="vidas-enemigo" class="vida-de-enemigo">0</p>
                 <p id="mascota-enemigo"></p>
                 <div id="ataques-del-enemigo"></div>
             </div>           
         </div>
-    </section>
+        
+<script src="modificada.js"></script>
 </body>
 </html>
