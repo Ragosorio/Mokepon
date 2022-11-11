@@ -108,7 +108,7 @@ let drogon = new Mokepon("Drogon", "png/drogon.png", 5, [Fuego, Fuego, Aire, Air
 let xener = new Mokepon("Xener", "png/xener.png", 5, [Agua, Aire, Oscuridad, Oscuridad, Hielo]);
 let honsog = new Mokepon("Honsog", "png/honsog.png", 5, [Agua, Tierra, Tierra, Oscuridad]);
 let vampy = new Mokepon("Vampy", "png/vampi.png", 5, [Oscuridad, Oscuridad, Aire, Aire]);
-let lady = new Mokepon("LadyM", "png/LadyM.png", 5, [Apocalipto, Apocalipto, Apocalipto, Apocalipto, Apocalipto , Apocalipto]);
+let lady = new Mokepon("LadyM", "png/ladym.png", 5, [Apocalipto, Apocalipto, Apocalipto, Apocalipto, Apocalipto , Apocalipto]);
 
 let hipodogeEnemigo = new Mokepon("Hipodoge", "./png/hipodoge.png", 5, [Agua, Tierra, Hielo, Agua]);
 let capipepoEnemigo = new Mokepon("Capipepo", "./png/capipepo.png", 5, [Tierra, Fuego, Agua, Tierra]);
